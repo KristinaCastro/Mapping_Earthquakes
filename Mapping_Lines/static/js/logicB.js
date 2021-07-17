@@ -4,6 +4,7 @@ console.log("working");
 // Create the map object with a center and zoom level.
 let map = L.map('mapid').setView([40.7, -94.5], 4);
 
+// create an airline route from SFO, AUS, YYZ to JFK
 // Coordinates for each point to be used in the line.
 let line = [
     [37.6213, -122.3790],
@@ -12,9 +13,10 @@ let line = [
     [40.6429, -73.7793]
   ];
 
-// Create a polyline using the line coordinates and make the line red.
+// Create a polyline using the line coordinates and make the line route a blue dashed line.
 L.polyline(line, {
     color: "blue",
+    dashArray: "10 10",
     weight: 4,
     opacity: 0.5
 }).addTo(map);
